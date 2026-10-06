@@ -1,0 +1,10 @@
+services:
+  markitdown-gui:
+    build: .
+    ports:
+      - "8501:8501"
+    environment:
+      MAX_FILE_SIZE_MB: "50"
+      PREVIEW_CHAR_LIMIT: "50000"
+      MARKITDOWN_ENABLE_PLUGINS: "false"
+    restart: unless-stopped
